@@ -1,0 +1,50 @@
+GET http://localhost:4000/categories
+
+####
+POST http://localhost:4000/products
+Content-Type: application/json
+
+{
+    "name": "The Hyena  ",
+    "description": "Tales of the hyena",
+    "price": 200,
+    "catid": "d43363f6-49fe-4f59-803f-266441c40963"
+
+}
+
+#####
+
+GET http://localhost:4000/categories
+
+
+############
+POST  http://localhost:4000/auth/register
+Content-Type: application/json
+
+{
+    "Name" : "Waweru",
+    "Email" : "waweru@gmail.com",
+    "Password" : "Qwerty2024%"
+}
+
+#########
+
+POST  http://localhost:4000/auth/login
+Content-Type: application/json
+
+{
+    "Email" : "waweru@gmail.com",
+    "Password" : "Qwerty2024%"
+}
+
+
+#######
+
+GET  http://localhost:4000/products
+token : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiJmYWYyNTE3Mi04NjBhLTQ4MDYtYjk1Yi1mMzU2NGRkNzNmYzkiLCJOYW1lIjoiU2FtdWVsIiwiaWF0IjoxNzE4MjY1NjE2LCJleHAiOjE3MTgyNzI4MTZ9.lMLLvTgLh5p5TY2Ddb40LRTl_uDrMtkaDfiM0lgN4MU
+
+
+#######
+
+GET  http://localhost:4000/products/category/d43363f6-49fe-4f59-803f-266441c40963
+token :eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWIiOiJmYWYyNTE3Mi04NjBhLTQ4MDYtYjk1Yi1mMzU2NGRkNzNmYzkiLCJOYW1lIjoiU2FtdWVsIiwiaWF0IjoxNzE4MjgyMzM1LCJleHAiOjE3MTgyODk1MzV9.vKIUYMZ7X2PuHRUTnMNJ9iSP5lMRRjFtPbdicjfBSTA
