@@ -6,6 +6,7 @@ const dbInstance = new DBHelper()
 export interface User {
     Id: string,
     Name: string,
+    Email:string,
     Password: string,
     isDeleted: number,
     isEmailSent: number,
@@ -17,7 +18,7 @@ export async function run() {
         users.forEach(user => {
             ejs.renderFile("../Templates/register.ejs", { name:user.Name }, (err, data) => {
                 let messageOption = {
-                    to: process.env.EMAIL,
+                    to: user.Email,
                     from: process.env.EMAIL,
                     subject: "Welcome to DEKUT",
                     html: data
