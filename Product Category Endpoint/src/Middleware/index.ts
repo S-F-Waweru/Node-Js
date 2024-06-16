@@ -11,8 +11,7 @@ export interface ExtendedRequest1 extends Request{
 }
 export function verifyToken(req:ExtendedRequest1, res : Response, next:NextFunction){
     try {
-        console.log('we are here')
-
+       
         const token = req.headers['token'] as string
         
         console.log(token)

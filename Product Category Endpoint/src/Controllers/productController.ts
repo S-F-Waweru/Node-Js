@@ -98,7 +98,7 @@ export async function updateProduct(
       price,
       catid,
     });
-    res.status(200).json({ message: "Product updated successfully" });
+    res.status(200).json({ message: "Product Updated Successfully" });
   } catch (error) {
     res.status(500).json(error);
   }
